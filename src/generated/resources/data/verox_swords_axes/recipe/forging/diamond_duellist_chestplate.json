@@ -1,0 +1,14 @@
+{
+  "type": "verox_swords_axes:forging",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "addition_count": 4,
+  "base": {
+    "item": "verox_swords_axes:duellist_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "verox_swords_axes:diamond_duellist_chestplate"
+  }
+}

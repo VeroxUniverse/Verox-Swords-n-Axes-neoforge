@@ -1,0 +1,13 @@
+{
+  "type": "verox_swords_axes:forging",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "verox_swords_axes:diamond_duellist_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "verox_swords_axes:netherite_duellist_chestplate"
+  }
+}

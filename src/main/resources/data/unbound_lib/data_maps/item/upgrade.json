@@ -1,0 +1,35 @@
+{
+  "values": {
+    "verox_swords_axes:whetstone": {
+      "kind": "stat",
+      "applies_to": "#verox_swords_axes:melee_weapons",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "amount": 1.0,
+          "slot": "mainhand"
+        }
+      ]
+    },
+    "verox_swords_axes:fire_inlay": {
+      "kind": "charged",
+      "applies_to": "#verox_swords_axes:melee_weapons",
+      "max_charges": 100,
+      "charges_per_refill": 25,
+      "refill": {
+        "item": "minecraft:blaze_powder"
+      }
+    },
+    "verox_swords_axes:iron_plating": {
+      "kind": "stat",
+      "applies_to": "#verox_swords_axes:upgradeable_armor",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.armor",
+          "amount": 1.0,
+          "slot": "armor"
+        }
+      ]
+    }
+  }
+}

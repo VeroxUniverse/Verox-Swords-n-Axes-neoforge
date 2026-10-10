@@ -1,0 +1,43 @@
+{
+  "values": {
+    "verox_swords_axes:duellist_helmet": {
+      "slots": 1
+    },
+    "verox_swords_axes:duellist_chestplate": {
+      "slots": 1
+    },
+    "verox_swords_axes:duellist_leggings": {
+      "slots": 1
+    },
+    "verox_swords_axes:duellist_boots": {
+      "slots": 1
+    },
+    "verox_swords_axes:diamond_duellist_helmet": {
+      "slots": 2
+    },
+    "verox_swords_axes:diamond_duellist_chestplate": {
+      "slots": 2
+    },
+    "verox_swords_axes:diamond_duellist_leggings": {
+      "slots": 2
+    },
+    "verox_swords_axes:diamond_duellist_boots": {
+      "slots": 2
+    },
+    "verox_swords_axes:netherite_duellist_helmet": {
+      "slots": 3
+    },
+    "verox_swords_axes:netherite_duellist_chestplate": {
+      "slots": 3
+    },
+    "verox_swords_axes:netherite_duellist_leggings": {
+      "slots": 3
+    },
+    "verox_swords_axes:netherite_duellist_boots": {
+      "slots": 3
+    },
+    "verox_swords_axes:short_sword": {
+      "slots": 1
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "I I",
+    "IWI",
+    "IWI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "verox_swords_axes:duellist_chestplate"
+  }
+}
