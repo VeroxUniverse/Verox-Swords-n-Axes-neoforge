@@ -17,7 +17,6 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.FORGE_ANVIL.get());
     }
 
     @Override

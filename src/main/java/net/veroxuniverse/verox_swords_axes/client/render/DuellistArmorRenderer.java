@@ -13,8 +13,8 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
  * One renderer per tier. Assets:
  * geo/item/armor/duellist_{tier}.geo.json, textures/item/armor/duellist_{tier}.png,
  * animations/item/armor/duellist_{tier}.animation.json.
- * Overlays next to the texture: _trim_default (built-in details), _trim_{pattern} (greyscale, tinted),
- * _trim_{pattern}_{material} (hand-made), _dye_cloth / _dye_plume (greyscale masks).
+ * Overlays next to the texture: _trim (greyscale, tinted with the trim material), optional _trim_{material}
+ * (hand-made), _dye_cloth / _dye_plume (greyscale masks).
  * Cape & plume bones are moved by the lib (ArmorPhysics).
  */
 public class DuellistArmorRenderer extends GeoArmorRenderer<DuellistArmorItem> {

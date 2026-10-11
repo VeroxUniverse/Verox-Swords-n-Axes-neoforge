@@ -1,0 +1,14 @@
+{
+  "values": {
+    "#minecraft:axes": {
+      "modifiers": [
+        { "attribute": "unbound_lib:lifesteal", "amount": 0.08, "slot": "mainhand" }
+      ]
+    },
+    "#minecraft:swords": {
+      "modifiers": [
+        { "attribute": "unbound_lib:crit_chance", "amount": 0.1, "slot": "mainhand" }
+      ]
+    }
+  }
+}

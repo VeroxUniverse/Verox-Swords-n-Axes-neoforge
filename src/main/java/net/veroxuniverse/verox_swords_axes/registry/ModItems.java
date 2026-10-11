@@ -3,9 +3,7 @@ package net.veroxuniverse.verox_swords_axes.registry;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -13,7 +11,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.veroxuniverse.verox_swords_axes.SwordsNAxes;
 import net.veroxuniverse.verox_swords_axes.item.ArmorTier;
 import net.veroxuniverse.verox_swords_axes.item.DuellistArmorItem;
-import net.veroxuniverse.verox_swords_axes.item.SmithingHammerItem;
 
 import java.util.List;
 
@@ -39,14 +36,6 @@ public final class ModItems {
     public static final DeferredItem<SwordItem> SHORT_SWORD = ITEMS.register("short_sword",
             () -> new SwordItem(Tiers.IRON, new Item.Properties()
                     .attributes(SwordItem.createAttributes(Tiers.IRON, 2, -2.0F))));
-
-    public static final DeferredItem<SmithingHammerItem> SMITHING_HAMMER = ITEMS.register("smithing_hammer",
-            () -> new SmithingHammerItem(new Item.Properties().durability(250)));
-    public static final DeferredItem<Item> WHETSTONE = ITEMS.registerSimpleItem("whetstone");
-    public static final DeferredItem<Item> FIRE_INLAY = ITEMS.registerSimpleItem("fire_inlay", new Item.Properties().rarity(Rarity.UNCOMMON));
-    public static final DeferredItem<Item> IRON_PLATING = ITEMS.registerSimpleItem("iron_plating");
-
-    public static final DeferredItem<BlockItem> FORGE_ANVIL = ITEMS.registerSimpleBlockItem(ModBlocks.FORGE_ANVIL);
 
     private ModItems() {}
 

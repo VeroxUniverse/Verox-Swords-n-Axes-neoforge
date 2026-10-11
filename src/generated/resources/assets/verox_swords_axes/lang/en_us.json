@@ -1,5 +1,4 @@
 {
-  "block.verox_swords_axes.forge_anvil": "Forge Anvil",
   "item.verox_swords_axes.diamond_duellist_boots": "Diamond Duellist Boots",
   "item.verox_swords_axes.diamond_duellist_chestplate": "Diamond Duellist Chestplate",
   "item.verox_swords_axes.diamond_duellist_helmet": "Diamond Duellist Helmet",
@@ -8,23 +7,10 @@
   "item.verox_swords_axes.duellist_chestplate": "Duellist Chestplate",
   "item.verox_swords_axes.duellist_helmet": "Duellist Helmet",
   "item.verox_swords_axes.duellist_leggings": "Duellist Leggings",
-  "item.verox_swords_axes.fire_inlay": "Fire Inlay",
-  "item.verox_swords_axes.iron_plating": "Iron Plating",
   "item.verox_swords_axes.netherite_duellist_boots": "Netherite Duellist Boots",
   "item.verox_swords_axes.netherite_duellist_chestplate": "Netherite Duellist Chestplate",
   "item.verox_swords_axes.netherite_duellist_helmet": "Netherite Duellist Helmet",
   "item.verox_swords_axes.netherite_duellist_leggings": "Netherite Duellist Leggings",
   "item.verox_swords_axes.short_sword": "Short Sword",
-  "item.verox_swords_axes.smithing_hammer": "Smithing Hammer",
-  "item.verox_swords_axes.whetstone": "Whetstone",
-  "itemGroup.verox_swords_axes": "Verox' Swords n' Axes",
-  "message.verox_swords_axes.forge_anvil.already_installed": "This upgrade is already installed",
-  "message.verox_swords_axes.forge_anvil.full": "All upgrade slots are taken",
-  "message.verox_swords_axes.forge_anvil.invalid": "Nothing to forge with this",
-  "message.verox_swords_axes.forge_anvil.no_slots": "This item has no upgrade slots",
-  "message.verox_swords_axes.forge_anvil.no_upgrades": "This item has no upgrades installed",
-  "message.verox_swords_axes.forge_anvil.not_applicable": "This upgrade doesn't fit this item",
-  "message.verox_swords_axes.forge_anvil.nothing": "Place an item and a material or upgrade on the anvil first",
-  "tooltip.verox_swords_axes.smithing_hammer": "Strike the Forge Anvil 3 times to forge or install upgrades",
-  "tooltip.verox_swords_axes.smithing_hammer.remove": "Sneak + use: remove the last upgrade"
+  "itemGroup.verox_swords_axes": "Verox' Swords n' Axes"
 }

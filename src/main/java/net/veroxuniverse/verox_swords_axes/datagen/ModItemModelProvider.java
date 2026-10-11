@@ -3,7 +3,6 @@ package net.veroxuniverse.verox_swords_axes.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.veroxuniverse.verox_swords_axes.SwordsNAxes;
@@ -35,12 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         placeholder(ModItems.NETHERITE_DUELLIST_BOOTS, "item/netherite_boots");
 
         handheldPlaceholder(ModItems.SHORT_SWORD, "item/iron_sword");
-        handheldPlaceholder(ModItems.SMITHING_HAMMER, "item/mace");
-        placeholder(ModItems.WHETSTONE, "item/flint");
-        placeholder(ModItems.FIRE_INLAY, "item/blaze_powder");
-        placeholder(ModItems.IRON_PLATING, "item/iron_nugget");
 
-        getBuilder(ModItems.FORGE_ANVIL.getId().getPath()).parent(new ModelFile.UncheckedModelFile(modLoc("block/forge_anvil")));
     }
 
     private void placeholder(DeferredItem<? extends Item> item, String vanillaTexture) {

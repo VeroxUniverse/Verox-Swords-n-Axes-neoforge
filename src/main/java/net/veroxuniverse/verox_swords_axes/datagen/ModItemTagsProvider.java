@@ -3,7 +3,7 @@ package net.veroxuniverse.verox_swords_axes.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.data.tags.TagsProvider.TagLookup;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ArmorItem;
@@ -11,11 +11,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredItem;
+import net.veroxuniverse.unbound_lib.tag.LibItemTags;
 import net.veroxuniverse.verox_swords_axes.SwordsNAxes;
 import net.veroxuniverse.verox_swords_axes.item.ArmorTier;
 import net.veroxuniverse.verox_swords_axes.item.DuellistArmorItem;
 import net.veroxuniverse.verox_swords_axes.registry.ModItems;
-import net.veroxuniverse.verox_swords_axes.registry.ModTags;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
@@ -30,19 +30,13 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ModTags.Items.MELEE_WEAPONS)
-                .add(ModItems.SHORT_SWORD.get())
-                .addTag(ItemTags.SWORDS)
-                .addTag(ItemTags.AXES);
         tag(ItemTags.SWORDS).add(ModItems.SHORT_SWORD.get());
-
-        tag(ModTags.Items.SMITHING_HAMMERS).add(ModItems.SMITHING_HAMMER.get());
-        tag(ModTags.Items.FORGEABLE);
+        tag(LibItemTags.MELEE_WEAPONS).add(ModItems.SHORT_SWORD.get());
 
         for (ArmorTier tier : ArmorTier.values()) {
             for (DeferredItem<DuellistArmorItem> piece : ModItems.duellistSet(tier)) {
                 DuellistArmorItem item = piece.get();
-                tag(ModTags.Items.UPGRADEABLE_ARMOR).add(item);
+                tag(LibItemTags.UPGRADEABLE_ARMOR).add(item);
                 tag(vanillaArmorTag(item.getType())).add(item);
                 tag(ItemTags.TRIMMABLE_ARMOR).add(item);
             }
