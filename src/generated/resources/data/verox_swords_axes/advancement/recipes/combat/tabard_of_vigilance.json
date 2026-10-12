@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "verox_swords_axes:tabard_of_vigilance"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:yellow_wool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_wool"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "verox_swords_axes:tabard_of_vigilance"
+    ]
+  }
+}

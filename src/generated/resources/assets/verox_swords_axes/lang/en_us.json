@@ -1,9 +1,12 @@
 {
+  "item.verox_swords_axes.belt_of_primal_force": "Belt of Primal Force",
   "item.verox_swords_axes.berserker_spike": "Berserker Spike",
   "item.verox_swords_axes.bladedance_oil": "Bladedance Oil",
   "item.verox_swords_axes.bloodforged_rivet": "Bloodforged Rivet",
   "item.verox_swords_axes.bonebreaker_inlay": "Bonebreaker Inlay",
+  "item.verox_swords_axes.butchers_chain": "Butcher's Chain",
   "item.verox_swords_axes.butchers_edge": "Butcher's Edge",
+  "item.verox_swords_axes.dancers_belt": "Dancer's Belt",
   "item.verox_swords_axes.diamond_duellist_boots": "Diamond Duellist Boots",
   "item.verox_swords_axes.diamond_duellist_chestplate": "Diamond Duellist Chestplate",
   "item.verox_swords_axes.diamond_duellist_helmet": "Diamond Duellist Helmet",
@@ -13,6 +16,7 @@
   "item.verox_swords_axes.duellist_chestplate": "Duellist Chestplate",
   "item.verox_swords_axes.duellist_helmet": "Duellist Helmet",
   "item.verox_swords_axes.duellist_leggings": "Duellist Leggings",
+  "item.verox_swords_axes.fencers_band": "Fencer's Band",
   "item.verox_swords_axes.fencers_step_soles": "Fencer's Step Soles",
   "item.verox_swords_axes.frenzy_blade_edge": "Frenzy Blade Edge",
   "item.verox_swords_axes.heavy_iron_wedge": "Heavy Iron Wedge",
@@ -23,8 +27,10 @@
   "item.verox_swords_axes.parry_plaque": "Parry Plaque",
   "item.verox_swords_axes.serrated_whetstone": "Serrated Whetstone",
   "item.verox_swords_axes.short_sword": "Short Sword",
+  "item.verox_swords_axes.tabard_of_vigilance": "Tabard of Vigilance",
   "item.verox_swords_axes.windrunner_grip_wrap": "Windrunner Grip Wrap",
   "item.verox_swords_axes.wound_seal_plate": "Wound-Seal Plate",
+  "item.verox_swords_axes.wrath_bracer": "Wrath Bracer",
   "item.verox_swords_axes.wrathember_core": "Wrathember Core",
   "itemGroup.verox_swords_axes": "Verox' Swords n' Axes"
 }
