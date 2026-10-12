@@ -126,6 +126,9 @@ dependencies {
     compileOnly "software.bernie.geckolib:geckolib-neoforge-${geckolib_version}"
     runtimeOnly "software.bernie.geckolib:geckolib-neoforge-${geckolib_version}"
 
+    compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+    runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+
     compileOnly "curse.maven:jade-324717:5884231"
     runtimeOnly "curse.maven:jade-324717:5884231"
 
@@ -149,7 +152,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
                              mod_authors            : mod_authors,
                              mod_description        : mod_description,
                              geckolib_version_range : geckolib_version_range,
-                             unbound_lib_version_range: unbound_lib_version_range]
+                             unbound_lib_version_range: unbound_lib_version_range,
+                             curios_version_range   : curios_version_range]
     inputs.properties replaceProperties
     expand replaceProperties
     from "src/main/templates"

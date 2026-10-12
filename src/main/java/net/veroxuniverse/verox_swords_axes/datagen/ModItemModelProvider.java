@@ -7,11 +7,9 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.veroxuniverse.verox_swords_axes.SwordsNAxes;
 import net.veroxuniverse.verox_swords_axes.registry.ModItems;
+import net.veroxuniverse.verox_swords_axes.registry.ModCurioItems;
+import net.veroxuniverse.verox_swords_axes.registry.ModUpgradeItems;
 
-/**
- * PLACEHOLDERS: every item points to a vanilla texture for now.
- * Once the real sprites exist, replace the vanilla path with basicItem(...) / handheld(...) on textures/item/<name>.png.
- */
 public class ModItemModelProvider extends ItemModelProvider {
 
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -35,6 +33,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldPlaceholder(ModItems.SHORT_SWORD, "item/iron_sword");
 
+        for (ModUpgradeItems.Entry upgrade : ModUpgradeItems.entries()) {
+            withExistingParent(upgrade.item().getId().getPath(), mcLoc("item/generated"))
+                    .texture("layer0", mcLoc(upgrade.placeholderTexture()));
+        }
+        for (ModCurioItems.Entry curio : ModCurioItems.entries()) {
+            withExistingParent(curio.item().getId().getPath(), mcLoc("item/generated"))
+                    .texture("layer0", mcLoc(curio.placeholderTexture()));
+        }
     }
 
     private void placeholder(DeferredItem<? extends Item> item, String vanillaTexture) {

@@ -1,0 +1,258 @@
+{
+  "values": {
+    "verox_swords_axes:serrated_whetstone": {
+      "kind": "stat",
+      "applies_to": "#unbound_lib:class_weapons/swordsman",
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:crit_chance",
+          "amount": 0.08,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "unbound_lib:crit_damage",
+          "amount": 0.1,
+          "slot": "mainhand"
+        }
+      ]
+    },
+    "verox_swords_axes:windrunner_grip_wrap": {
+      "kind": "stat",
+      "applies_to": "#unbound_lib:class_weapons/swordsman",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "amount": 0.2,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "unbound_lib:swordsman_power",
+          "amount": 0.05,
+          "slot": "mainhand"
+        }
+      ]
+    },
+    "verox_swords_axes:bladedance_oil": {
+      "kind": "charged",
+      "applies_to": "#unbound_lib:class_weapons/swordsman",
+      "max_charges": 100,
+      "charges_per_refill": 25,
+      "refill": {
+        "item": "minecraft:honeycomb"
+      },
+      "on_hit": [
+        {
+          "effect": "unbound_lib:frenzy",
+          "trigger": "crit",
+          "duration": 80,
+          "max_stacks": 4,
+          "self": true
+        }
+      ]
+    },
+    "verox_swords_axes:duelists_plume": {
+      "kind": "stat",
+      "applies_to": "#minecraft:head_armor",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "amount": 0.05,
+          "operation": "add_multiplied_base",
+          "slot": "armor"
+        },
+        {
+          "attribute": "unbound_lib:swordsman_power",
+          "amount": 0.05,
+          "slot": "armor"
+        }
+      ]
+    },
+    "verox_swords_axes:parry_plaque": {
+      "kind": "stat",
+      "applies_to": "#minecraft:chest_armor",
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:swordsman_power",
+          "amount": 0.08,
+          "slot": "armor"
+        },
+        {
+          "attribute": "minecraft:generic.armor_toughness",
+          "amount": 1.0,
+          "slot": "armor"
+        }
+      ]
+    },
+    "verox_swords_axes:frenzy_blade_edge": {
+      "kind": "stat",
+      "applies_to": "#unbound_lib:class_weapons/swordsman",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "amount": 0.3,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "unbound_lib:swordsman_power",
+          "amount": 0.1,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "amount": -0.15,
+          "operation": "add_multiplied_total",
+          "slot": "mainhand"
+        }
+      ]
+    },
+    "verox_swords_axes:fencers_step_soles": {
+      "kind": "stat",
+      "applies_to": "#minecraft:foot_armor",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "amount": 0.05,
+          "operation": "add_multiplied_base",
+          "slot": "armor"
+        },
+        {
+          "attribute": "unbound_lib:crit_chance",
+          "amount": 0.1,
+          "slot": "armor"
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "amount": -2.0,
+          "slot": "armor"
+        }
+      ]
+    },
+    "verox_swords_axes:bloodforged_rivet": {
+      "kind": "stat",
+      "applies_to": "#minecraft:chest_armor",
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:lifesteal",
+          "amount": 0.04,
+          "slot": "armor"
+        },
+        {
+          "attribute": "unbound_lib:berserker_power",
+          "amount": 0.05,
+          "slot": "armor"
+        }
+      ]
+    },
+    "verox_swords_axes:wrathember_core": {
+      "kind": "charged",
+      "applies_to": "#unbound_lib:class_weapons/berserker",
+      "max_charges": 100,
+      "charges_per_refill": 25,
+      "refill": {
+        "item": "minecraft:magma_cream"
+      },
+      "on_hit": [
+        {
+          "effect": "unbound_lib:rage",
+          "trigger": "hit",
+          "duration": 80,
+          "self": true,
+          "self_health_below": 0.5
+        }
+      ]
+    },
+    "verox_swords_axes:bonebreaker_inlay": {
+      "kind": "charged",
+      "applies_to": "#unbound_lib:class_weapons/berserker",
+      "max_charges": 100,
+      "charges_per_refill": 25,
+      "refill": {
+        "item": "minecraft:bone_block"
+      },
+      "on_hit": [
+        {
+          "effect": "unbound_lib:sundered",
+          "trigger": "hit",
+          "chance": 0.35,
+          "duration": 100,
+          "max_stacks": 3
+        }
+      ]
+    },
+    "verox_swords_axes:wound_seal_plate": {
+      "kind": "charged",
+      "applies_to": "#minecraft:leg_armor",
+      "max_charges": 100,
+      "charges_per_refill": 25,
+      "refill": {
+        "item": "minecraft:glistering_melon_slice"
+      },
+      "on_hit": [
+        {
+          "effect": "minecraft:regeneration",
+          "trigger": "hit",
+          "duration": 60,
+          "self": true,
+          "self_health_below": 0.5
+        }
+      ]
+    },
+    "verox_swords_axes:heavy_iron_wedge": {
+      "kind": "stat",
+      "applies_to": "#unbound_lib:class_weapons/berserker",
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:armor_penetration",
+          "amount": 0.18,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "amount": -0.15,
+          "slot": "mainhand"
+        }
+      ]
+    },
+    "verox_swords_axes:butchers_edge": {
+      "kind": "stat",
+      "applies_to": "#unbound_lib:class_weapons/berserker",
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:damage_multiplier",
+          "amount": 0.15,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "unbound_lib:berserker_power",
+          "amount": 0.08,
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.max_health",
+          "amount": -4.0,
+          "slot": "mainhand"
+        }
+      ]
+    },
+    "verox_swords_axes:berserker_spike": {
+      "kind": "stat",
+      "applies_to": "#minecraft:head_armor",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.armor",
+          "amount": -2.0,
+          "slot": "armor"
+        }
+      ],
+      "on_hit": [
+        {
+          "effect": "unbound_lib:empowered",
+          "trigger": "kill",
+          "duration": 100,
+          "max_stacks": 2,
+          "self": true
+        }
+      ]
+    }
+  }
+}

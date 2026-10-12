@@ -37,3 +37,10 @@ type = "required"
 versionRange = "${unbound_lib_version_range}"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "curios"
+type = "required"
+versionRange = "${curios_version_range}"
+ordering = "NONE"
+side = "BOTH"

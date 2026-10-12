@@ -7,7 +7,9 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.veroxuniverse.verox_swords_axes.registry.ModArmorMaterials;
 import net.veroxuniverse.verox_swords_axes.registry.ModCreativeTabs;
+import net.veroxuniverse.verox_swords_axes.registry.ModCurioItems;
 import net.veroxuniverse.verox_swords_axes.registry.ModItems;
+import net.veroxuniverse.verox_swords_axes.registry.ModUpgradeItems;
 import org.slf4j.Logger;
 
 @Mod(SwordsNAxes.MOD_ID)
@@ -17,6 +19,8 @@ public class SwordsNAxes {
 
     public SwordsNAxes(IEventBus modEventBus, ModContainer modContainer) {
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
+        ModUpgradeItems.init();
+        ModCurioItems.init();
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
     }

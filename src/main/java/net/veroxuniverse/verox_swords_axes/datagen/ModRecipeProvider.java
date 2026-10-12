@@ -7,6 +7,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -15,6 +16,8 @@ import net.veroxuniverse.unbound_lib.recipe.ForgingRecipe;
 import net.veroxuniverse.verox_swords_axes.SwordsNAxes;
 import net.veroxuniverse.verox_swords_axes.item.ArmorTier;
 import net.veroxuniverse.verox_swords_axes.registry.ModItems;
+import net.veroxuniverse.verox_swords_axes.registry.ModCurioItems;
+import net.veroxuniverse.verox_swords_axes.registry.ModUpgradeItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -57,6 +60,23 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("I").pattern("S")
                 .define('I', Items.IRON_INGOT).define('S', Items.STICK)
                 .unlockedBy("has_iron", has(Items.IRON_INGOT)).save(output);
+
+        for (ModUpgradeItems.Entry upgrade : ModUpgradeItems.entries()) {
+            ShapelessRecipeBuilder builder = ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, upgrade.item().get());
+            for (ItemLike ingredient : upgrade.ingredients()) {
+                builder.requires(ingredient);
+            }
+            ItemLike first = upgrade.ingredients().get(0);
+            builder.unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(first.asItem()).getPath(), has(first)).save(output);
+        }
+        for (ModCurioItems.Entry curio : ModCurioItems.entries()) {
+            ShapelessRecipeBuilder builder = ShapelessRecipeBuilder.shapeless(RecipeCategory.COMBAT, curio.item().get());
+            for (ItemLike ingredient : curio.ingredients()) {
+                builder.requires(ingredient);
+            }
+            ItemLike first = curio.ingredients().get(0);
+            builder.unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(first.asItem()).getPath(), has(first)).save(output);
+        }
     }
 
     private static void forging(RecipeOutput output, ItemLike base, ItemLike addition, int count, ItemLike result) {

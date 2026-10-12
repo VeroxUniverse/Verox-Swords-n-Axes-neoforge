@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider.TagLookup;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ArmorItem;
@@ -15,10 +16,11 @@ import net.veroxuniverse.unbound_lib.tag.LibItemTags;
 import net.veroxuniverse.verox_swords_axes.SwordsNAxes;
 import net.veroxuniverse.verox_swords_axes.item.ArmorTier;
 import net.veroxuniverse.verox_swords_axes.item.DuellistArmorItem;
+import net.veroxuniverse.verox_swords_axes.registry.ModCurioItems;
 import net.veroxuniverse.verox_swords_axes.registry.ModItems;
 
-import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
+import javax.annotation.Nullable;
 
 public class ModItemTagsProvider extends ItemTagsProvider {
 
@@ -30,8 +32,13 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        for (ModCurioItems.Entry curio : ModCurioItems.entries()) {
+            tag(curioSlot(curio.slot())).add(curio.item().get());
+        }
+
         tag(ItemTags.SWORDS).add(ModItems.SHORT_SWORD.get());
         tag(LibItemTags.MELEE_WEAPONS).add(ModItems.SHORT_SWORD.get());
+        tag(LibItemTags.SWORDSMAN_WEAPONS).add(ModItems.SHORT_SWORD.get());
 
         for (ArmorTier tier : ArmorTier.values()) {
             for (DeferredItem<DuellistArmorItem> piece : ModItems.duellistSet(tier)) {
@@ -50,5 +57,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
             case LEGGINGS -> ItemTags.LEG_ARMOR;
             case BOOTS -> ItemTags.FOOT_ARMOR;
         };
+    }
+
+    private static TagKey<Item> curioSlot(String slot) {
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("curios", slot));
     }
 }

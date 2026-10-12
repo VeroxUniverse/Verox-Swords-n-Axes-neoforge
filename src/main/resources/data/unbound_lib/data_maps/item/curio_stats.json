@@ -1,0 +1,79 @@
+{
+  "values": {
+    "verox_swords_axes:fencers_band": {
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:crit_chance",
+          "amount": 0.06
+        },
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "amount": 0.1
+        }
+      ]
+    },
+    "verox_swords_axes:tabard_of_vigilance": {
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:swordsman_power",
+          "amount": 0.1
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "amount": 0.1
+        }
+      ]
+    },
+    "verox_swords_axes:dancers_belt": {
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "amount": 0.15
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "amount": 0.05,
+          "operation": "add_multiplied_base"
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "amount": -2.0
+        }
+      ]
+    },
+    "verox_swords_axes:butchers_chain": {
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:berserker_power",
+          "amount": 0.08
+        },
+        {
+          "attribute": "unbound_lib:armor_penetration",
+          "amount": 0.08
+        }
+      ]
+    },
+    "verox_swords_axes:belt_of_primal_force": {
+      "on_hit": [
+        {
+          "effect": "minecraft:regeneration",
+          "trigger": "kill",
+          "self": true,
+          "duration": 60
+        }
+      ]
+    },
+    "verox_swords_axes:wrath_bracer": {
+      "modifiers": [
+        {
+          "attribute": "unbound_lib:berserker_power",
+          "amount": 0.15
+        },
+        {
+          "attribute": "minecraft:generic.max_health",
+          "amount": -4.0
+        }
+      ]
+    }
+  }
+}
